@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#description {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+
+
+#survey-form {
+    background: #333333;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    /* Added a small gap for the gradient to show */
+    margin: 3px;
+}
+
+/* Updated gradient border */
+#survey-form::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+        75deg,
+        #ff0000,
+        #ff8800,
+        #ffd000,
+        #00ffff,
+        #0066ff,
+        #a200ff,
+        #ff00ff,
+        #ff0000
+    );
+    z-index: -1;
+    border-radius: 12px;
+    background-size: 300%;
+    animation: borderAnimation 12s linear infinite;
+    filter: blur(2px); /* Added blur for smoother gradient */
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 150% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #444444; /* Slightly lighter gray for inputs */
+    color: white;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #666;
+    background: #555555;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+#submit {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#submit:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    #survey-form {
+        padding: 20px;
+    }
+}

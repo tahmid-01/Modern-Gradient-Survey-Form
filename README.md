@@ -1,10 +1,14 @@
 # Modern-Gradient-Survey-Form
+A developer survey form using eye catching gradient effect to be more interactive.
 
-Documentation
+
+## Description
 
 This is a simple survey form with a modern gradient design.
 Where Simply HTML and CSS are usedto create a survey form with a modern gradient design.
 This Form is Responsive and can be used on any device. And the design is modern and attractive. Besides, the graident is smooth and not too much and work perfect on all devices.
+
+## Visual Demonstration
 
 
 In this project you will have a modern survey form with:
